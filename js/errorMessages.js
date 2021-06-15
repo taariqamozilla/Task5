@@ -3,8 +3,11 @@
 
 // This function adds the error message.
 // It takes two arguments: the form element ID and the message.
+
 function addErrorMessage(id, msg) {
    	'use strict';
+
+    
     
     // Get the form element reference:
     var elem = document.getElementById(id);
@@ -17,7 +20,7 @@ function addErrorMessage(id, msg) {
     if (span) {
         span.firstChild.value = msg; // Update
     } else { // Create new.
-    
+
         // Create the span:
         span = document.createElement('span');
         span.id = newId;
@@ -47,8 +50,11 @@ function removeErrorMessage(id) {
 	    // Remove the span:
 	    span.parentNode.removeChild(span);
 
+
 	} // End of IF.
+
     
+
 } // End of removeErrorMessage() function.
 
 function addCorrectMessage(id, msg) {

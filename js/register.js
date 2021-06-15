@@ -25,16 +25,21 @@ function validateForm(e) {
 	// Validate the first name:
 	if (/^[A-Z \.\-']{2,20}$/i.test(firstName.value)) {
 		removeErrorMessage('firstName');
+		addCorrectMessage('firstName', '✓');
 	} else {
+		removeCorrectMessage('firstName');
 		addErrorMessage('firstName', 'Please enter your first name.');
 		console.log('firstName', 'Please enter your first name.');
 		error = true;
+
 	}
 	
 	// Validate the Last name:
 	if (/^[A-Z \.\-']{2,20}$/i.test(lastName.value)) {
 		removeErrorMessage('lastName');
+		addCorrectMessage('lastName', '✓');
 	} else {
+		removeCorrectMessage('lastName');
 		addErrorMessage('lastName', 'Please enter your last name.');
 		console.log('lastName', 'Please enter your last name.');
 		error = true;
@@ -43,7 +48,9 @@ function validateForm(e) {
 	// Validate the email address:
 	if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(email.value)) {
 		removeErrorMessage('email');
+		addCorrectMessage('email', '✓');
 	} else {
+		removeCorrectMessage('email');
 		addErrorMessage('email', 'Please enter your email address.');
 		error = true;
 	}
@@ -51,7 +58,9 @@ function validateForm(e) {
 	// Validate the phone number:
 	if (/\d{3}[ \-\.]?\d{3}[ \-\.]?\d{4}/.test(phone.value)) {
 		removeErrorMessage('phone');
+		addCorrectMessage('phone', '✓');
 	} else {
+		removeCorrectMessage('phone');
 		addErrorMessage('phone', 'Please enter your phone number.');
 		error = true;
 	}
@@ -59,7 +68,9 @@ function validateForm(e) {
 	// Validate the City name:
 	if (/^[A-Z \.\-']{2,20}$/i.test(city.value)) {
 		removeErrorMessage('city');
+		addCorrectMessage('city');
 	} else {
+		removeCorrectMessage('city');
 		addErrorMessage('city', 'Please enter your city name.');
 		console.log('city', 'Please enter your city name.');
 		error = true;
@@ -68,7 +79,9 @@ function validateForm(e) {
 	// Validate the state:
 	if (state.selectedIndex != 0) {
 		removeErrorMessage('state');
+		addCorrectMessage('state');
 	} else {
+		removeCorrectMessage('state');
 		addErrorMessage('state', 'Please select your state.');
 		error = true;
 	}
@@ -76,7 +89,9 @@ function validateForm(e) {
 	// Validate the zip code:
 	if (/^\d{5}(-\d{4})?$/.test(zip.value)) {
 		removeErrorMessage('zip');
+		addCorrectMessage('zip', '✓');
 	} else {
+			removeCorrectMessage('zip');
 			addErrorMessage('zip', 'Please enter your zip code.');
 		error = true;
 	}

@@ -133,4 +133,11 @@ textarea {
 
 .error {
 	color: #FF1400;
+	
+}
+.error:before{
+	content: ' x';
+}
+.correct{
+	color: green;
 }

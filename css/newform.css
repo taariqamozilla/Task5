@@ -69,7 +69,17 @@ div.one {
 
 .error {
 	color: #D92525;
+
 }
+
+label.error:before{
+	content: 'X ';
+}
+
+.correct{
+	color: green;
+}
+
 span.error{
 	padding-left: 10px;
 }
